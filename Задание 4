@@ -1,0 +1,16 @@
+include <stdio.h>
+include <local.h>
+int main ()
+{
+int a,b,S,P;
+setlocal(0,"rus");
+printf("Введите длину:a");
+scanf_s("%d",&a);
+printf("Введите ширину:b");
+scanf_s("%d",&b);
+S=a*b;
+P=2*(a+b);
+printf("Площадь прямоугольника=%d\nПериметр прямоугольника =%d\n",S,P);
+return 0
+}
+

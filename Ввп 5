@@ -31,7 +31,7 @@ AC = c - a;
 BC = c - b;
 sum = AC + BC;
 cout « "AC= " « AC « "\nBC= " « BC « "\nsum= " « sum « endl;
-[04.01, 15:18] Байель Одногруп2: }
+
 void task3() {
 double a, b, c, AC, BC, proizvedenia_AC_BC;
 cout « "\n\n3)Введите а, b и c" « endl;

@@ -1,0 +1,147 @@
+1.	
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+void poweraA3(float A, float* B)
+{
+	*B = A * A * A;
+}
+
+int main(void)
+{
+	int i;
+	for (i = 1; i <= 5; ++i) {
+		float A;
+		cout << i << "A:";
+		cin >> A;
+		float B;
+		poweraA3(A, &B);
+		cout << "B:" << B << endl;
+	}
+	return 0;
+}
+2.	
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int Sign(int x)
+{
+	if (x==0)
+	{
+		return 0;
+	}
+	if (x < 0)
+	{
+		return -1;
+	}
+	if (x > 0)
+	{
+		return 1;
+	}
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите A:" << endl;
+	int A;
+	cin >> A;
+	int x = A;
+	A = Sign(x);
+	cout << "Введите B:" << endl;
+	int B;
+	cin >> B;
+	x = B;
+	B = Sign(x); 
+
+	cout << A + B << endl;
+
+	return(0);
+}
+3.	
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+float RingS(float R1, float R2) {
+	float S = 3.14 * abs(R1 * R1-R2 * R2);
+	if (R1 > R2) {
+		return S;
+	}
+	else {
+		return 0;
+	}
+}
+
+int main() {
+	for (int i = 1; i <= 3; i++) {
+		float R1, R2;
+		cout << "R1=";
+		cin >> R1;
+		cout << "R2=";
+		cin >> R2;
+		cout << "S" << i << "=" << RingS(R1, R2) << endl;
+	}
+	return 0;
+}
+4.	
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+
+int quarter(float x, float y)
+{
+    if ((x > 0) && (y > 0))
+        return 1;
+    if ((x < 0) && (y > 0))
+        return 2;
+    if ((x < 0) && (y < 0))
+        return 3;
+    if ((x > 0) && (y < 0))
+        return 4;
+}
+
+int main(void)
+{
+    setlocale(LC_ALL, "Russian");
+    int i;
+    for (i = 1; i <= 3; ++i)
+    {
+        float x, y;
+        cout << "X:";
+        cin >> x;
+        cout << "Y:";
+        cin >> y;
+        int k = quarter(x, y);
+        cout << k << " четверть" << "\n";
+    }
+    return 0;
+  }
+5.	
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+float Fact2(int n) 
+{
+    int temp = 1;
+    for (; n > 0; n -= 2) 
+        temp *= n;
+    return temp;
+}
+
+int main(void)
+{
+    int i, n;
+    for (i = 1; i <= 5; ++i) {
+        cout << "N:";
+        cin >> n;
+        cout << "Fact:" << Fact2(n) << "\n";
+    }
+    return 0;
+}
